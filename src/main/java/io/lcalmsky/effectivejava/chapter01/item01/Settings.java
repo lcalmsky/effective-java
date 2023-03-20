@@ -10,6 +10,12 @@ public class Settings {
   private Settings() {
   }
 
+  public Settings(boolean useAutoSteering, boolean useAbs, Difficulty difficulty) {
+    this.useAutoSteering = useAutoSteering;
+    this.useAbs = useAbs;
+    this.difficulty = difficulty;
+  }
+
   public static Settings newInstance() {
     return SETTINGS;
   }
