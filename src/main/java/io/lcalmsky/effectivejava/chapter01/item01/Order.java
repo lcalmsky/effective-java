@@ -5,6 +5,7 @@ public class Order {
   private boolean prime;
   private boolean urgent;
   private Product product;
+  private OrderStatus orderStatus;
 
   public static Order primeOrder(Product product, boolean prime) {
     Order order = new Order();
