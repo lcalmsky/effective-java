@@ -1,6 +1,8 @@
 package io.lcalmsky.effectivejava.chapter01.item02.javabeans;
 
-public class NutritionFacts {
+import java.io.Serializable;
+
+public class NutritionFacts implements Serializable {
 
   private int servingSize;
   private int servings;
