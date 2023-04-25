@@ -1,6 +1,7 @@
 package io.lcalmsky.effectivejava.chapter01.item05.dependencyinjection;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 public class SpellChecker {
 
@@ -9,6 +10,10 @@ public class SpellChecker {
 
   public SpellChecker(Dictionary dictionary) {
     this.dictionary = dictionary;
+  }
+
+  public SpellChecker(Supplier<? extends Dictionary> dictionarySupplier) {
+    this.dictionary = dictionarySupplier.get();
   }
 
   public boolean isValid(String word) {
