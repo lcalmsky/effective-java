@@ -24,4 +24,10 @@ class SpellCheckerTest {
     });
     Assertions.assertTrue(spellChecker.isValid("test"));
   }
+
+  @Test
+  void isValid2() {
+    SpellChecker spellChecker = new SpellChecker(DefaultDictionary::new);
+    Assertions.assertTrue(spellChecker.isValid("test"));
+  }
 }
